@@ -1,0 +1,22 @@
+@startuml
+title Cargo dependency graph: A
+left to right direction
+skinparam shadowing false
+skinparam packageStyle rectangle
+
+rectangle "A" as node0
+rectangle "B" as node1
+rectangle "C" as node2
+rectangle "D" as node3
+rectangle "E" as node4
+rectangle "F" as node5
+
+node0 --> node1
+node0 --> node2
+node1 --> node3
+node2 --> node3
+node2 --> node4
+node3 --> node2
+node4 --> node5
+node5 --> node1
+@enduml
